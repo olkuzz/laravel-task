@@ -1,0 +1,28 @@
+### Создать задачу
+POST http://localhost:8000/api/tasks
+Content-Type: application/json
+
+{
+    "title": "Изучить Laravel",
+    "description": "Пройти курс по Laravel",
+    "status": "in_progress"
+}
+
+### Получить все задачи
+GET http://localhost:8000/api/tasks
+
+### Получить задачу по ID
+GET http://localhost:8000/api/tasks/1
+
+### Обновить задачу
+PUT http://localhost:8000/api/tasks/1
+Content-Type: application/json
+
+{
+    "title": "Изучить Laravel Advanced",
+    "status": "completed"
+}
+
+### Удалить задачу
+DELETE http://localhost:8000/api/tasks/1
+

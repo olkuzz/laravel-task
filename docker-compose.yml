@@ -6,7 +6,7 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
-        image: php:8.3
+        image: php:8.2
         container_name: app
         restart: unless-stopped
         tty: true
@@ -29,7 +29,7 @@ services:
             - "80:80"
             - "443:443"
         volumes:
-            - /home/username/laravel-task:/var/www
+            - .:/var/www
             - ./nginx/conf.d:/etc/nginx/conf.d
         networks:
             - app-network
